@@ -1,0 +1,355 @@
+:root{
+    --primary: #fff;
+    --Strong-Cyan: #26baa7;
+    --Light-Blue: hsl(233, 100%, 69%);
+    --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+    --Grayish-Blue: hsl(201, 11%, 66%);
+}
+
+@font-face {
+    font-family: 'Bai Jamjuree';
+    src: url(../Bai_Jamjuree/BaiJamjuree-Medium.ttf);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*global*/
+body{
+    font-family: 'Bai Jamjuree';
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.container{
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+ul{
+    list-style: none;
+}
+
+.btn{
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.btn:hover{
+    opacity: 80%;
+}
+
+.btn-1{
+    background-color: var(--Strong-Cyan);
+    box-shadow: hsla(171, 66%, 44%, 0.5) 0 8px 16px;
+}
+
+.btn-2{
+    background-color: var(--Light-Blue);
+    box-shadow: hsla(233, 100%, 69%, 0.5) 0 8px 16px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--Strong-Cyan);
+}
+
+header,main,.showcase,.download-bar{
+    text-align: center;
+}
+
+header p,main p,.content div p,.showcase-top p,.bottom-text p,
+.box p,.bar-body,a{
+    color: var(--Grayish-Blue);
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+/*header*/
+header{
+    background: url(../images/bg-header-desktop.png);
+    position: relative;
+    box-shadow: inset #fff 0 0 20px;
+}
+
+header img{
+    margin: 2rem 0;
+}
+
+header .container div{
+    position: absolute;
+    right: 5px;
+    top: 13.5rem;
+}
+
+.head-title{
+    color: #000;
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+.little-text{
+    font-size: 1.5rem;
+    width: 70%;
+    margin: 10px auto;
+}
+
+/*main*/
+main{
+    margin-top: 20rem;
+}
+
+main p{
+    font-size: 1.3rem;
+    width: 80%;
+    margin: 1.5rem auto;
+}
+
+.info-tab{
+    display: flex;
+}
+
+.tab-img{
+    margin-left: -3rem;
+}
+
+.tab-img img{
+    width: 100%;
+    height: auto;
+}
+
+.content{
+    align-self: center;
+    margin-left: 4rem;
+}
+
+.content div{
+    width: 70%;
+    padding: 5px 0;
+}
+
+.content div p{
+    font-size: 22px;
+}
+
+/*showcase*/
+.showcase-top{
+    margin: 5rem 0;
+}
+
+.showcase-top p{
+    width: 80%;
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+.showcase-bottom img{
+    width: 100%;
+    height: auto;
+}
+
+.bottom-text{
+    width: 80%;
+    margin: auto;
+}
+
+.bottom-text p{
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+/*boxes*/
+.boxes .container{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.box{
+    margin: 10px;
+    font-size: 16px;
+}
+
+.box img{
+    margin-bottom: 20px;
+}
+
+.box h4{
+    margin-bottom: 10px;
+}
+
+/*logo-tab*/
+.logo-tab{
+    margin: 2rem 0;
+}
+
+.logo-tab .container picture{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*download-bar*/
+.download-bar{
+    margin-bottom: 4rem;
+}
+
+.bar-title{
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.bar-body{
+    width: 70%;
+    height: auto;
+    margin: 20px auto;
+}
+
+/*footer*/
+footer{
+    background: hsla(201, 11%, 66%, 0.2);
+    margin-bottom: 2rem;
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .container div img{
+    width: 30%;
+    height: auto;
+}
+
+footer picture img{
+    margin-left: 20px;
+}
+
+.image-hover:hover{
+    transform: scale(1.1);
+    filter: hue-rotate(120deg) saturate(0.74) brightness(0.66);
+}
+
+.attribution { font-size: 20px; text-align: center; margin-bottom: 2rem;}
+.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a:hover{ color: var(--Strong-Cyan); }
+
+@media (max-width:768px){
+    .logo-tab .container picture, footer .container{
+        flex-direction: column;
+    }
+
+    .logo-tab picture img{
+        width: 50%;
+        height: auto;
+        padding: 2rem 0;
+        align-self: center;
+    }
+
+    footer{
+        text-align: center;
+    }
+
+    footer div, footer ul{
+        align-self: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .image-hover{
+        padding-right: 1.3rem;
+    }
+
+}
+
+@media (max-width:425px){
+    .info-tab,.boxes .container{
+        flex-direction: column;
+    }
+
+    .btn{
+        width: 90%;
+    }
+
+    header img{
+        width: 30%;
+    }
+
+    header .container div{
+        top: 10.8rem;
+        line-height: 1.2;
+    }
+
+    .head-title{
+        font-size: 2.2rem;
+    }
+
+    .little-text{
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    main p{
+        width: 100%;
+        margin: auto;
+        font-size: 0.8rem;
+    }
+
+    .tab-img{
+        margin-left: 4.5rem;
+    }
+
+    .tab-img img{
+        width: 80%;
+        margin: auto;
+    }
+
+    .content{
+        align-self: center;
+        justify-self: center;
+    }
+
+    .content div{
+        text-align: center;
+        width: 80%;
+    }
+
+    .content div p,.showcase-top p{
+        font-size: 0.8rem;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+
+    .showcase-top p{
+        width: 100%;
+    }
+
+    .showcase-bottom img{ margin-bottom: 2rem; }
+
+    .bottom-text p{ font-size: 16px; }
+
+    .bar-title{ font-size: 1.5rem; }
+
+    .bar-body{width: 100%; }
+}
+
+@media (max-width:375px){
+    header{
+        background: url(../images/bg-header-mobile.png);
+    }
+}
